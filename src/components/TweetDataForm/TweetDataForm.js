@@ -123,9 +123,6 @@ const TweetDataForm = (props) => {
             <td>
               <button onClick={ updateProfilePictureFetch }>Fetch URL</button>
             </td>
-            <td>
-              <button onClick={ updateProfilePictureUpload }>Upload</button>
-            </td>
           </tr>
           <tr>
             <td colSpan={ 4 }>
@@ -148,21 +145,14 @@ const TweetDataForm = (props) => {
           </tr>
 
           <tr>
-            <td><label htmlFor="replies">Replies: </label></td>
-            <td><input type="text"  id="replies"  placeholder="100"  onKeyUp={ updateReplies }/></td>
-            <td><label htmlFor="retweets">Retweets: </label></td>
-            <td><input type="text"  id="retweets" placeholder="100" onKeyUp={ updateRetweets }/></td>
-          </tr>
-          <tr>
             <td><label htmlFor="likes">Likes: </label></td>
             <td><input type="text"  id="likes" placeholder="1.5K" onKeyUp={ updateLikes }/></td>
             <td><label htmlFor="verified">Is Verified? </label></td>
             <td><input type="checkbox"  id="verified" onClick={ updateVerified } /></td>
           </tr>
           <tr>
-            <td colSpan={ 4 }>
-              <button className="download" onClick={ downloadScreenshot }> Download Tweet </button>
-            </td>
+            <td><label htmlFor="replies">Replies: </label></td>
+            <td><input type="text"  id="replies"  placeholder="100"  onKeyUp={ updateReplies }/></td>
           </tr>
         </tbody>
       </table>
