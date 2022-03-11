@@ -1,0 +1,164 @@
+@import '../../colors';
+
+.tweet-display-wrapper
+{
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  border: 1px solid $color-light-gray-two;
+  background-color: #fff;
+
+  height: auto;
+  width: 100%;
+  max-width: 550px;
+
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tweet-display-wrapper:hover
+{
+  background-color: $color-light-gray-three;
+}
+
+.tweet-display-wrapper .row
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.tweet-display-wrapper .row .float-right
+{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+
+  justify-content: right;
+}
+
+.tweet-display-wrapper .row.centered
+{
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.tweet-display-wrapper .row.bottom-bordered
+{
+  border-bottom: 1px solid #cfd9de;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tweet-display-wrapper .column
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-display-wrapper .display-name
+{
+  font-weight: 700;
+  padding-right: 0.25rem;
+  padding-left: 0.1rem;
+}
+
+.tweet-display-wrapper .username
+{
+  color: $color-dark-gray;
+}
+
+.tweet-display-wrapper .profile-picture
+{
+  border-radius: 100%;
+  background-color: $color-blue;
+  width: 48px;
+  height: 48px;
+  margin-right: 0.5rem;
+}
+
+.tweet-display-wrapper .profile-picture img
+{
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  margin-right: 0.5rem;
+}
+
+.tweet-display-wrapper .verified img
+{
+  position: absolute;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.tweet-display-wrapper .twitter-bird img
+{
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.tweet-display-wrapper .tweet-text
+{
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.tweet-display-wrapper .datetime
+{
+  color: $color-dark-gray;
+}
+
+.tweet-display-wrapper .datetime:hover
+{
+  text-decoration: underline;
+}
+
+.tweet-display-wrapper .info img
+{
+  color: #f00;
+  fill: #f00;
+  width: 20px;
+  height: 20px;
+}
+
+.tweet-display-wrapper .likes-icon,
+.tweet-display-wrapper .reply-icon,
+.tweet-display-wrapper .copy-link-icon
+{
+  width: 15px;
+  height: 15px;
+
+  margin-right: 0.75rem;
+  margin-bottom: 1.2rem;
+
+}
+
+.tweet-display-wrapper .likes,
+.tweet-display-wrapper .reply,
+.tweet-display-wrapper .copy-link
+{
+  color: $color-dark-gray;
+  margin-right: 1.75rem;
+
+  margin-bottom: 1rem;
+}
+
+.tweet-display-wrapper .read-replies
+{
+  color: $color-blue;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 20px;
+  border: 1px solid #cfd9de;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}

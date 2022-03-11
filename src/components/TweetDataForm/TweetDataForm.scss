@@ -1,0 +1,57 @@
+@import '../../colors';
+
+.tweet-data-form-wrapper 
+{
+  border-radius: 10px;
+  border: 1px solid $color-light-gray-two;
+  background-color: $color-light-gray-three;
+
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.tweet-data-form-wrapper table 
+{
+  width: 100%;
+  padding: 1rem;
+}
+
+.tweet-data-form-wrapper table tr td 
+{
+  padding-bottom: 0.5rem;
+}
+
+.tweet-data-form-wrapper label 
+{
+  font-weight: 700;
+}
+
+.tweet-data-form-wrapper input
+{
+  width: 90%;
+}
+
+.tweet-data-form-wrapper input#verified
+{
+  width: auto;
+}
+
+.tweet-data-form-wrapper button
+{
+  width: 90%;
+}
+
+.tweet-data-form-wrapper button.download
+{
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.tweet-data-form-wrapper textarea 
+{
+  width: 100%;
+  height: 100px;
+
+  resize: none;
+}
