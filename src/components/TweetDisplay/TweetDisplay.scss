@@ -111,6 +111,12 @@
   margin-bottom: 0.75rem;
 }
 
+.tweet-display-wrapper .tweet-text .hash-tag,
+.tweet-display-wrapper .tweet-text .at-tag
+{
+  color: $color-blue;
+}
+
 .tweet-display-wrapper .datetime
 {
   color: $color-dark-gray;

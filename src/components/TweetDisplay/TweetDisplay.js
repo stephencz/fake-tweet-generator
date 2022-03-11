@@ -47,8 +47,7 @@ const TweetDisplay = (props) => {
       </div>
 
       <div className="row">
-        <div className="tweet-text">
-          { props.tweetFormData.tweet_text }
+        <div className="tweet-text" dangerouslySetInnerHTML={{ __html: props.tweetFormData.tweet_text }}>
         </div>
       </div>
 

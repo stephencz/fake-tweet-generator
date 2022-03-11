@@ -29,14 +29,12 @@ const TweetDataForm = (props) => {
     })
   }
 
-  const updateProfilePictureUpload = (event) => {
-
-  }
-
   const updateTweetText = (event) => {
+    const hashTags = event.target.value.replace(/\B(\#[a-zA-Z]+\b)(?!;)/ig, '<span class="hash-tag">$1</span>');
+    const atTags = hashTags.replace(/\B(\@[a-zA-Z]+\b)(?!;)/ig, '<span class="at-tag">$1</span>');
     props.setTweetFormData({
       ...props.tweetFormData,
-      tweet_text: event.target.value
+      tweet_text: atTags
     });
   }
 
@@ -61,13 +59,6 @@ const TweetDataForm = (props) => {
     });
   }
 
-  const updateRetweets = (event) => {
-    props.setTweetFormData({
-      ...props.tweetFormData,
-      retweets: event.target.value
-    });
-  }
-
   const updateLikes = (event) => {
     props.setTweetFormData({
       ...props.tweetFormData,
@@ -80,27 +71,6 @@ const TweetDataForm = (props) => {
       ...props.tweetFormData,
       verified: event.target.checked
     });
-  }
-
-  const downloadScreenshot = (event) => {
-    const download = window.open();
-    const tweet = document.getElementById("tweet-display");
-
-    var svgElements = document.body.querySelectorAll('img');
-    svgElements.forEach(function(item) {
-        item.setAttribute("width", item.getBoundingClientRect().width);
-        item.setAttribute("height", item.getBoundingClientRect().height);
-        item.style.width = null;
-        item.style.height= null;
-    });
-
-    html2canvas(tweet, { 
-      useCORS: true, 
-      allowTaint: true
-    }).then((canvas) => {
-      const image = canvas.toDataURL("image/png");
-      download.location.href = image;
-    })
   }
 
   return (
